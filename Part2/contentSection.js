@@ -1,4 +1,3 @@
-
 /**
  * A Content section comprises a header and one or more lines of content.
  * 
