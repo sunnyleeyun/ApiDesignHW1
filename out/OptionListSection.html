@@ -82,8 +82,6 @@
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -115,10 +113,6 @@
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
             <td class="description last">The section header</td>
         </tr>
@@ -148,125 +142,8 @@
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
             <td class="description last">An array of <a href="https://github.com/75lb/command-line-args/blob/master/doc/option-definition.md">option definition</a> objects.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-|
-
-<span class="param-type">Array.&lt;string></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">If specified, only options from this particular group will be printed. <a href="https://github.com/75lb/command-line-usage/blob/master/example/groups.js">Example</a>.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>hide</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-|
-
-<span class="param-type">Array.&lt;string></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">The names of one of more option definitions to hide from the option list. <a href="https://github.com/75lb/command-line-usage/blob/master/example/hide.js">Example</a>.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>reverseNameOrder</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last">By default, this property is set to false. When set to true, the option alias will be shown after the name, such as --verbose, -v, instead of the default order -v, --verbose.</td>
         </tr>
 
     
@@ -295,10 +172,6 @@
                 </td>
             
 
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last">An options object suitable for passing into <a href="https://github.com/75lb/table-layout#table-">table-layout</a>, providing customization options for the option list table. You can refer to an <a href="https://github.com/75lb/command-line-usage/blob/master/example/option-list-options.js">example</a> here.</td>
@@ -340,7 +213,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="optionListSection.js.html">optionListSection.js</a>, <a href="optionListSection.js.html#line81">line 81</a>
+        <a href="optionListSection.js.html">optionListSection.js</a>, <a href="optionListSection.js.html#line49">line 49</a>
     </li></ul></dd>
     
 
@@ -383,55 +256,28 @@ const section = {
   ]
 } 
 
-Example 2: Demonstrating various types of options in an OptionList section.
-const section = {
+Example 2: Demonstrating the usage of a `tableOptions` OptionList section.
+const section3 = {
   header: 'Options',
-  optionList: [
-    {
-      name: 'help',
-      alias: 'h',
-      description: 'Display this usage guide.'
-    },
-    {
-      name: 'src',
-      description: 'The input files to process',
-      multiple: true,
-      defaultOption: true,
-      typeLabel: '{underline file} ...'
-    },
-    {
-      name: 'timeout',
-      description: 'Timeout value in ms.',
-      alias: 't',
-      typeLabel: '{underline ms}'
-    }
-  ]
-} 
+  optionList: optionDefinitions,
+  tableOptions: {
+    columns: [
+      {
+        name: 'option',
+        noWrap: true,
+        padding: { left: '🔥  ', right: '' },
+        width: 30
+      },
+      {
+        name: 'description',
+        width: 50,
+        padding: { left: '', right: '   🔥' }
+      }
+    ]
+  }
+}
 
-Example: Demonstrating various types of options in an OptionList section.
-const section = {
-  header: 'Options',
-  optionList: [
-    {
-      name: 'help',
-      alias: 'h',
-      description: 'Display this usage guide.'
-    },
-    {
-      name: 'src',
-      description: 'The input files to process',
-      multiple: true,
-      defaultOption: true,
-      typeLabel: '{underline file} ...'
-    },
-    {
-      name: 'timeout',
-      description: 'Timeout value in ms.',
-      alias: 't',
-      typeLabel: '{underline ms}'
-    }
-  ]
-} </code></pre>
+  </code></pre>
 
 
 
@@ -473,7 +319,7 @@ const section = {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Sep 10 2023 11:58:36 GMT-0400 (Eastern Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Sep 10 2023 12:21:59 GMT-0400 (Eastern Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
