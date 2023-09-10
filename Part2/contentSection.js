@@ -1,8 +1,8 @@
 /**
  * A Content section comprises a header and one or more lines of content.
  * 
- * @property header {string} - The section header
- * @property content {string|string[]|object[]} - Overloaded property, accepting data in one of four formats:  
+ * @property header {string} - The section header. The style of the output is always bold and underlined.
+ * @property content {string|string[]|object[]} - The section content. Overloaded property, accepting data in one of four formats:  
  * <ol style="type: 1;">
  * <li> A single string (one line of text)
  * <li> An array of strings (multiple lines of text)
