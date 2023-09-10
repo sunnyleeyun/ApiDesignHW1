@@ -8,11 +8,11 @@
  * <li> An array of strings (multiple lines of text)
  * <li> An array of objects (recordset-style data). In this case, the data will be rendered in table format. The property names of each object are not important, so long as they are consistent throughout the array. 
  * <li> An object with two properties - `data` and `options`. In this case, the data and options will be passed directly to the underlying {@link https://github.com/75lb/table-layout|table layout} module for rendering. 
- * @property {boolean} [raw=false] - By default, this property is set to false. When set to true, it prevents indentation and wrapping, making it particularly useful for banners.
+ * @property {boolean} [raw=false] - Enable raw output. By default, this property is set to false. When set to true, it prevents indentation and wrapping, making it particularly useful for banners.
  * 
  * 
  * @example
- * Example 1: Demonstrating a simple string of content.
+ * Example 1: Demonstrating a simple string of content. For ansi formatting, use {@link https://github.com/chalk/chalk#tagged-template-literal|chalk}.
  * const section1 = {
  *   header: 'A typical app',
  *   content: 'Generates something {rgb(255,200,0).italic very {underline.bgRed important}}.'
@@ -27,7 +27,7 @@
  *   ]
  * }
  * 
- * Example 3: An object with `data` and `options` properties will be passed directly to the underlying [table layout](https://github.com/75lb/table-layout) module for rendering.
+ * Example 3: An object with `data` and `options` properties will be passed directly to the underlying {@link https://github.com/75lb/table-layout|table layout} module for rendering.
  * const section3 = {
  *   header: 'A typical app',
  *   content: {
