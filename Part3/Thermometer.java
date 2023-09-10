@@ -39,8 +39,3 @@ public class Thermometer {
     }
 	
 }
-
-// possible names:
-// curTemp
-// curTemperature
-// curThermostatTemp
