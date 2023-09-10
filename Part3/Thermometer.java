@@ -28,20 +28,14 @@ public class Thermometer {
 	 * <br><br><strong>Example:</strong>
 	 * Assume the thermostat reads 32&deg;F or 0&deg;C.
 	 * {@snippet :
-	 * Thermometer t = new Thermometer();
-	 * t.curTemperature() // returns {Fahrenheit=32, Celsius=0}
+	 * curTemperature() // returns {Fahrenheit=32, Celsius=0}
 	 * }
 	 */
-	public Map<Scale, Integer> curTemperature() {
+	public static Map<Scale, Integer> curTemperature() {
         // implementation
 		
 		// temporary code to remove errors
 		return new EnumMap<Scale, Integer>(Scale.class);
     }
-
+	
 }
-
-// possible names:
-// curTemp
-// curTemperature
-// curThermostatTemp
