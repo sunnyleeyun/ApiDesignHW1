@@ -30,6 +30,7 @@ class OptionDefinition {
  *   ]
  * } 
  * 
+ * @example
  * Example 2: Illustrating the usage of a `superGroup` in an OptionList section.
  * const section2 = {
  *   header: 'Main options',
@@ -60,6 +61,7 @@ class OptionDefinition {
  *   superGroup: ['main', 'input']
  * }
  * 
+ * @example
  * Example 3: Illustrating the usage of a `hide` in an OptionList section.
  * const section3 = {
  *   header: 'Main options',
@@ -82,6 +84,7 @@ class OptionDefinition {
  *   ]
  * }
  * 
+ * @example
  * Example 4: Illustrating the usage of a `reverseNameOrder` in an OptionList section.
  * const section4 = {
  *   header: 'Options',
@@ -96,7 +99,7 @@ class OptionDefinition {
  *   reverseNameOrder: true
  * } * 
  * 
- * 
+ * @example
  * Example 5: Demonstrating the usage of a `tableOptions` OptionList section.
  * const section5 = {
  *   header: 'Options',

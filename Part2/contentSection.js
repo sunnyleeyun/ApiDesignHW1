@@ -18,6 +18,7 @@
  *   content: 'Generates something {rgb(255,200,0).italic very {underline.bgRed important}}.'
  * }
  * 
+ * @example
  * Example 2: An array of strings is interpreted as lines, to be joined by the system newline character.
  * const section2 = {
  *   header: 'A typical app',
@@ -27,6 +28,7 @@
  *   ]
  * }
  * 
+ * @example
  * Example 3: An object with `data` and `options` properties will be passed directly to the underlying {@link https://github.com/75lb/table-layout|table layout} module for rendering.
  * const section3 = {
  *   header: 'A typical app',
@@ -41,6 +43,7 @@
  *   }
  * } 
  * 
+ * @example
  * Example 4: Illustrating a basic content string with the raw property set to true.
  * const section4 = {
  *   header: 'A typical app',
