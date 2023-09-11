@@ -1,13 +1,15 @@
 /**
  * A Content section comprises a header and one or more lines of content.
  * 
- * @property header {string} - The section header. The style of the output is always bold and underlined.
+ * @property [header] {string} - The section header. By default, the style of the output is bold and underlined, but this can be overridden with ansi formatting.
  * @property content {string|string[]|object[]} - The section content. Overloaded property, accepting data in one of four formats:  
  * <ol style="type: 1;">
  * <li> A single string (one line of text)
  * <li> An array of strings (multiple lines of text)
  * <li> An array of objects (recordset-style data). In this case, the data will be rendered in table format. The property names of each object are not important, so long as they are consistent throughout the array. 
  * <li> An object with two properties - `data` and `options`. In this case, the data and options will be passed directly to the underlying {@link https://github.com/75lb/table-layout|table layout} module for rendering. 
+ * @throws <b>“Error: must have an "options" or "data" property”</b> if an empty object is passed to `content.`
+ * @throws <b>“Error: invalid input - 'content' must be a string, array of strings, or array of plain objects”</b> if any other invalid input is passed to `content.`
  * @property {boolean} [raw=false] - Enable raw output. By default, this property is set to false. When set to true, it prevents indentation and wrapping, making it particularly useful for banners.
  * 
  * 

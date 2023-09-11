@@ -6,11 +6,11 @@ class OptionDefinition {
 /**
  * An OptionList section includes a table that presents the provided option definitions.
  * 
- * @property header {string} - The section header. The style of the output is always bold and underlined.
- * @property optionList {OptionDefinition[]} - The list of options to be displayed. An array of {@link https://github.com/75lb/command-line-args/blob/master/doc/option-definition.md|option definition} objects. 
+ * @property [header] {string} - The section header. By default, the style of the output is bold and underlined, but this can be overridden with ansi formatting.
+ * @property optionList {OptionDefinition[]} - The list of options to be displayed. An array of {@link https://github.com/75lb/command-line-args/blob/master/doc/option-definition.md|option definition} objects. In addition to the option definition properties, two more properties can be included:
  *  <ul>
  *   <li> description (string): A description of the option.
- *   <li> typeLabel   (string): A custom type label to replace the default type string (e.g., `underline file`). More descriptive type labels like `ms`, `file`, `command`, etc., are often more useful.
+ *   <li> typeLabel   (string): A custom type label to replace the default type string. More descriptive type labels like `ms`, `file`, `command`, etc., are often more useful than the default `string` type.
  * </ul>
  * @property {string|string[]} [superGroup] - Options to be grouped. If specified, only options from this particular group will be printed. The "super" prefix is used to differentiate from "group" at a lower hierarchy.
  * @property {string|string[]} [hide] - Options to be hidden. Provide the names of one or more option definitions to hide them from the option list.
@@ -54,7 +54,7 @@ class OptionDefinition {
  *       name: 'timeout',
  *       description: 'Timeout value in ms',
  *       alias: 't',
- *       typeLabel: '{underline ms}',
+ *       typeLabel: 'ms',
  *       group: 'main'
  *     }
  *   ],

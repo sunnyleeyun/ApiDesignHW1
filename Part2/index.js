@@ -12,8 +12,10 @@
  * This section data is passed to <code>commandLineUsage()</code> which returns a usage guide.
  * 
  * <br> <br>
- * Inline ansi formatting can be used anywhere within section content using 
- * chalk template literal syntax.
+ * Inline ansi formatting can be used to format any string with {@link https://github.com/chalk/chalk-template|chalk-template},
+ * an API that provides tagged template literals support for the {@link https://github.com/chalk/chalk|chalk} API.
+ * If the chalk style could not be found, the following error will be thrown:
+ * <b>"Error: Unknown Chalk style"</b>
  * 
  * <br> <br>
  * For example, this script:
